@@ -112,7 +112,23 @@ public class PosterManagerTest {
 
     }
 
+    @Test
+    public void findEqualsLimit() {
+        PosterManager manager = new PosterManager(3);
+        manager.addMovie(movie1);
+        manager.addMovie(movie2);
+        manager.addMovie(movie3);
+
+        String[] expected = {movie3, movie2, movie1};
+        String[] actual = manager.findLastNoLimit();
+
+        Assertions.assertArrayEquals(expected, actual);
+
+    }
+
 }
+
+
 
 
 

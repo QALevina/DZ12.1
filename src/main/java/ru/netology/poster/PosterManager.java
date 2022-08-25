@@ -50,6 +50,7 @@ public class PosterManager {
 
     public String[] findLast(int limit) {
         int resultLenght;
+
         if (limit <= movies.length) {
             resultLenght = limit;
         } else {
@@ -65,6 +66,9 @@ public class PosterManager {
 
     public String[] findLastNoLimit() {
         int resultLenght;
+        if (limit == movies.length) {
+            resultLenght = limit;
+        }
         if (limit <= movies.length) {
             resultLenght = limit;
         } else {
